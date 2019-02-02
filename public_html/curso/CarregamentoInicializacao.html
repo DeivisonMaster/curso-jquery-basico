@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Carregamento e Inicialização</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+        <script src="../scripts/jquery-3.3.1.js"></script>
+        
+        <script type="text/javascript">
+            /* Utilização antes do carregamento do DOM */
+            $(document).ready(function(){
+                alert('hello world 1');
+            });
+            
+            /* Utilização pós carregamento do DOM */
+            $(window).load(function (){
+               alert('elementos carregados'); 
+            });
+        </script>
+    </head>
+    <body>
+        
+        <h2>Declaração, carregamento e Inicialização</h2>
+        
+    </body>
+</html>

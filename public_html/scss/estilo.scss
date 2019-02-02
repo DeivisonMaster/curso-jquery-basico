@@ -1,0 +1,42 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/01/2019, 21:16:31
+    Author     : Master
+*/
+
+*{
+    margin: 0; padding: 0;
+}
+$corLinkPadrao: cadetblue;
+
+h2{
+    color: $corLinkPadrao;
+}
+
+.main{
+    width: 100%; height: auto;
+
+    .section{
+        width: 1200px; min-height: 500px; margin: 0 auto; border: 1px solid #ddd;
+
+        #idFormCadastro{
+            border: 1px solid #eee;
+            .indiceFormulario{
+                width: 200px; text-align: left;
+            }
+            
+            tr td input{
+                width: 300px;
+            }
+        }
+    }
+}
+
+
+
+
+

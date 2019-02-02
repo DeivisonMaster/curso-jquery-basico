@@ -1,0 +1,36 @@
+*{
+    margin: 0; padding: 0; vertical-align: baseline; outline: none; color: red;
+}
+/*
+    e f
+    e > f
+    e + f
+*/
+
+#d1{
+   color: orange;
+   h1{
+       color: pink;
+   }
+}
+#d1 + h1{
+    color: blue;
+}
+h3,h4,h5{
+    font-weight: bold; color: black;
+}
+h3[title]{
+    color: blue;
+}
+#d2 > p:first-child{
+    text-decoration: underline; color: gold;
+}
+#d2 > p:last-child{
+    text-decoration: dotted;
+}
+#d3 > p:first-letter{
+    color: black;
+}
+#d3 > p:first-line{
+    text-decoration: underline;
+}
