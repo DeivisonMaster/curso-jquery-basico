@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../scripts/jquery-3.3.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                
+                $('h2').css('margin', '0');
+                $('p').css({margin: '0', color: 'blue'});
+                $('.div1').css({'margin-bottom:':'20px', 'background-color': '#ccc'});
+                
+                // Selecionando elementos filhos
+                $('.div1 > span')
+                        .hide()
+                        .delay('1000')
+                        .fadeIn(1000)
+                        .css({color: 'green', 'font-size': '15px'});
+
+                $('.div1 h2')
+                        .hide()
+                        .css({'font-size': '50px', color: 'red'})
+                        .fadeIn(700);
+                
+                
+                // selecionando o filho direto de #div1
+                $('.div1 > span').css({color: 'red'});
+                
+                
+                // Selecionando o rimeiro elemento após o selecionado
+                $('.p1 + p').css({'font-size' : '25px'});
+                
+                
+                // Selecionando todos os elementos após o selecionado
+                $('.p1 ~ p').css({color: 'black'});
+            });
+        </script>
+    </head>
+    <body>
+        <div class="div1">
+            <h2>H2 filho de div1 </h2>
+            <p>P filho de div1 <span>Span filho de P</span></p>
+            <span>Span filho de div1</span>
+        </div>
+        
+        <h2>H2 fora de div1</h2>
+        <p class="p1">P1 fora de div1 </p>
+        <p>P2 fora de div1 </p>
+        <p>P3 fora de div1 </p>
+    </body>
+</html>
