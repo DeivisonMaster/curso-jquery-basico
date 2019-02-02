@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../scripts/jquery-3.3.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                /*
+                 *  Encadeamento
+                 * 
+                 $('h1').css("color", "red");
+                 $('h1').hide();
+                 $('h1').delay('1000');
+                 $('h1').fadeIn('slow');
+                 $('h1').text('Curso JQuery Básico');*/
+
+                /*
+                 * Encadeamento em linha
+                 * 
+                 * $('h1').css("color", "orange").hide().delay('1000').fadeIn('slow').text('Curso de JQuery Básico');
+                 * 
+                 */
+
+                $('h1')
+                        .css("color", "orange")
+                        .hide()
+                        .delay('1000')
+                        .fadeIn('slow')
+                        .text('Curso de JQuery Básico')
+                        .click(function () {
+                            $('body').css("background-color", "#ccc");
+                            $(this).css("color", "#fff");
+                        });
+
+
+                /* Mais de um elemento CSS na mesma função */
+                $('a').css({color: 'red', display: 'block'});
+                
+                $('.link2').css("color", "green");
+                
+                $('#link3').css("color", "#000");
+                
+                //$('*').css('margin', '0').css('padding', '50px');
+                
+                $('*').css({margin: '0', padding: '0'});
+                
+                $('h1, #link3').css('border-bottom', '1px solid blue');
+
+            });
+        </script>
+    </head>
+    <body>
+
+        <h1>PontoCanal - Inscreva-se</h1>
+
+        <a href="#">Link 1</a>
+        <a href="#" class="link2">Link 2</a>
+        <a href="#" id="link3">Link 3</a>
+
+
+
+    </body>
+</html>
