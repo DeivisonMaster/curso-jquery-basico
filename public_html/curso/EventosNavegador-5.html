@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../scripts/jquery-3.3.1.js"></script>
+        <script type="text/javascript">
+
+            $(function () {
+                $('*').css({margin: '0', padding: '0'});
+                redimensionaImagemAoCarregarAPagina();
+                redimensionaImagemUsuario();
+                /* utilizando a função de erro que é um else para 
+                 * caso não exista uma imagem válida no elemento img
+                 **/
+
+                /*
+                 $('img').error(function () {
+                 var imagem = $(this).attr('src');
+                 alert('imagem ' + imagem + 'indisponivel');
+                 
+                 $('img').attr('src', '../img/erro1.png');
+                 });
+                 */
+
+                function redimensionaImagemAoCarregarAPagina() {
+                    var larguraJanela = $(window).width();
+                    var alturaJanela = $(window).height();
+
+                    $('img')
+                            .width(larguraJanela)
+                            .height(alturaJanela);
+                }
+
+                function redimensionaImagemUsuario() {
+                    $(window).resize(function () {
+                        redimensionaImagemAoCarregarAPagina();
+                    });
+                }
+
+                function escondeImagemAposRolagemDoScroll() {
+                    $(window).scroll(function () {
+                        $('img').fadeOut(1000);
+                    });
+                }
+
+                $('body').css('height', '5000px');
+                $(window).scroll(function () {
+                    var topo = $(window).scrollTop();
+                    if(topo > 200){
+                        $('img').fadeOut('1000');
+                    }else{
+                        $('img').fadeIn('1000');
+                        
+                    }
+                });
+
+            });
+
+        </script>
+    </head>
+    <body>
+        <img src="../img/gato.jpg" />       
+    </body>
+</html>
