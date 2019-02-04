@@ -1,0 +1,42 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03/02/2019, 18:44:29
+    Author     : Master
+*/
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 14px;
+  margin: 0 auto; }
+
+.ex1 {
+  width: 460px;
+  padding: 20px;
+  background-color: #1e90ff;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff; }
+
+label {
+  display: block;
+  margin: 0 auto;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f8f8f8; }
+
+input, textarea {
+  padding: 5px;
+  width: 450px;
+  margin: 0 auto; }
+
+button {
+  width: 465px;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=eventos-teclado.css.map */

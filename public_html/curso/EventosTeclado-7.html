@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <style>
+            @import "../css/eventos-teclado.css";
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../scripts/jquery-3.3.1.js"></script>
+
+        <script type="text/javascript">
+
+            /* inserindo placeholder para navegadores antigos */
+            /* focusIn focusOut */
+            $(function () {
+                $('.place').each(function () {
+                    var placeholder = $(this).attr('title');
+                    $(this)
+                            .val(placeholder)
+                            .css('color', '#ddd')
+                            .focusin(function () {
+                                $(this).css('color', '#000');
+                                if ($(this).val() === placeholder) {
+                                    $(this).val('');
+                                }
+                            }).focusout(function () {
+                        if ($(this).val() === '') {
+                            $(this).val(placeholder).css('color', '#ddd');
+                        }
+                    });
+                });
+
+
+
+                /* keypress */
+                /*
+                 $('.key').keypress(function () {
+                 $('.ex1').text($(this).val());
+                 });
+                 */
+
+
+                /* keydown */
+                $('.key').keydown(function () {
+                    $('.ex1').text($(this).val());
+                });
+                
+                /* keyup */
+                $('.key').keyup(function () {
+                    $('.ex1').text($(this).val());
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+
+        <div class="ex1">Aguardando ação</div>
+
+        <form action="">
+            <label>
+                <input type="text" class="place" title="Digite o seu nome"/>
+            </label>
+            <label>
+                <input type="text" class="place" title="Digite seu email"/>
+            </label>
+            <label>
+                <input type="text" class="place" title="Digite sua idade"/>
+            </label>
+            <label>
+                <textarea rows="3" class="place key"></textarea>
+            </label>
+
+            <label>
+                <button>Botão</button>
+                <button>Enviar</button>
+            </label>
+
+        </form>
+
+    </body>
+</html>
